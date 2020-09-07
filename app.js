@@ -8,6 +8,7 @@ const logger = require('koa-logger')
 
 const danmaku = require('./routes/danmaku')
 const comment = require('./routes/comment')
+const play = require('./routes/play')
 
 // error handler
 onerror(app)
@@ -42,6 +43,7 @@ app.use(async (ctx, next) => {
 // routes
 app.use(danmaku.routes(), danmaku.allowedMethods())
 app.use(comment.routes(), comment.allowedMethods())
+app.use(play.routes(), play.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {

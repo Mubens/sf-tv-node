@@ -9,7 +9,7 @@ if (env === 'dev') {
     user: 'root',
     password: '0095428',
     port: '3306',
-    database: 'sf-tv'
+    database: 'sftv'
   }
 
   REDIS_CONF = {
@@ -24,7 +24,7 @@ if (env === 'production') {
     user: 'root',
     password: '0095428',
     port: '3306',
-    database: 'sf-tv'
+    database: 'sftv'
   }
 
   REDIS_CONF = {
