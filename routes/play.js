@@ -8,7 +8,7 @@ router.prefix('/api/play')
 router.get('/list', async function (ctx, next) {
   const { pId } = ctx.request.query
   const data = await getEpisodes(pId)
-  ctx.body = data[0] ? new SuccessModel(data) : new ErrorModel('没有记录')
+  ctx.body = data ? new SuccessModel(data) : new ErrorModel('没有记录')
 })
 
 module.exports = router
