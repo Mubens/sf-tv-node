@@ -1,0 +1,20 @@
+[
+  {
+    "title": "博人传 火影忍者新时代",
+    "img": "http://localhost:3000/img/hot-carousel/b6556b143bc74b348554387d7fdd2a60.jpg",
+    "small_img": "http://localhost:3000/img/hot-carousel/a_100047949_m_601_m23_480_270.webp",
+    "url": "/play/4"
+  },
+  {
+    "title": "海贼王",
+    "img": "http://localhost:3000/img/hot-carousel/df704643484e49559cab50305a6c4267.jpg",
+    "small_img": "http://localhost:3000/img/hot-carousel/a_100037106_m_601_m4_480_270.webp",
+    "url": "/play/1"
+  },
+  {
+    "title": "名侦探柯南",
+    "img": "http://localhost:3000/img/hot-carousel/b46854db7f0a4ff1a27a54135b67fefe.jpg",
+    "small_img": "http://localhost:3000/img/hot-carousel/a_100006957_m_601_m37_480_270.webp",
+    "url": "/play/3"
+  }
+]

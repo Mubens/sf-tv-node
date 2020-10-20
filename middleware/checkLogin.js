@@ -1,4 +1,4 @@
-const { verifyToken } = require('../model/jwt')
+const Jwt = require('../model/jwt')
 const { ErrorModel } = require('../model/resModel')
 
 const checkLogin = async (ctx, next) => {
@@ -6,7 +6,7 @@ const checkLogin = async (ctx, next) => {
   const {
     token: isToken,
     data: { iat, exp }
-  } = verifyToken(token)
+  } = Jwt.verify(token)
   // console.log(token, isToken, iat, exp)
   if (isToken && iat < exp) {
     // console.log('next')
@@ -18,7 +18,7 @@ const checkLogin = async (ctx, next) => {
 }
 
 const getUserId = async (ctx, next) => {
-  const { id = undefined } = verifyToken(ctx.header.authorization && ctx.header.authorization.split('Bearer ')[1]).data
+  const { id = undefined } = Jwt.verify(ctx.header.authorization && ctx.header.authorization.split('Bearer ')[1]).data
   ctx.request.body.user_id = id
   await next()
 }

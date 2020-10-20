@@ -9,6 +9,8 @@ const session = require('koa-generic-session')
 const redisStore = require('koa-redis')
 const { historyApiFallback } = require('koa2-connect-history-api-fallback')
 
+// router
+const index = require('./routes/index')
 const danmaku = require('./routes/danmaku')
 const comment = require('./routes/comment')
 const play = require('./routes/play')
@@ -60,6 +62,7 @@ app.use(
 )
 
 // routes
+app.use(index.routes(), index.allowedMethods())
 app.use(danmaku.routes(), danmaku.allowedMethods())
 app.use(comment.routes(), comment.allowedMethods())
 app.use(play.routes(), play.allowedMethods())
